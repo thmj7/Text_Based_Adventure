@@ -1,0 +1,17 @@
+{% extends "game/base.html" %}
+
+{% block content %}
+    <div class="story-text">
+        {{ scene.text }}
+    </div>
+
+    {% if scene.is_ending %}
+        <a class="choice-button" href="/">Restart</a>
+    {% else %}
+        {% for choice in scene.choices.all %}
+            <form action="/{{ choice.next_scene.key }}/" method="get">
+                <button class="choice-button">{{ choice.text }}</button>
+            </form>
+        {% endfor %}
+    {% endif %}
+{% endblock %}

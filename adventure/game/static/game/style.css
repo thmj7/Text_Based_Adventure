@@ -1,0 +1,59 @@
+body {
+    margin: 0;
+    height: 100vh;
+
+    /* Dark overlay + forest image = instant mood */
+    background:
+        linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
+        url("/static/game/forest.jpg");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    font-family: "Georgia", serif;
+    color: #f2f2f2;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    padding: 40px;
+}
+
+/* Story text styling */
+.story-text {
+    font-size: 22px;
+    max-width: 700px;
+    margin-bottom: 30px;
+    background: rgba(0,0,0,0.6);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Choice buttons */
+.choice-button {
+    width: 260px;
+    margin: 10px;
+    padding: 14px;
+
+    background-color: rgba(0,0,0,0.75);
+    border: 1px solid #aaa;
+    color: white;
+
+    cursor: pointer;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+
+    transition: all 0.2s ease;
+}
+
+.choice-button:hover {
+    background-color: rgba(255,255,255,0.15);
+    transform: scale(1.04);
+}
